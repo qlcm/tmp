@@ -29,8 +29,8 @@ GetScore <- function(cg.mtbr, kWinSize, ref.length) {
 
 library("methyutils")
 library("BSgenome.Hsapiens.UCSC.hg38")
-tissues <- list.files("/home/qzzh/J.R.Ecker/mtbr/mtbr1/")
-file_path<- "/home/qzzh/J.R.Ecker/mtbr/mtbr1/"
+tissues <- list.files("/home/qzzh/J.R.Ecker/mtbr/mtbr2/")
+file_path<- "/home/qzzh/J.R.Ecker/mtbr/mtbr2/"
 #chrs <- c("chr21","chr22","chrX","chrY")
 chrs <- c("chr1","chr2","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chr10","chr11","chr12","chr13","chr14","chr15",
            "chr16","chr17","chr18","chr19","chr20","chr21","chr22","chrX","chrY")
@@ -54,7 +54,7 @@ for (chr in chrs){
 	
 	sw.df <- data.frame(winsize = kWinSize,cor = cr,tissue = ts,chrom=chr)
 	#ts.list[[ts]] <- sw.df
-       write.table(sw.df,"/home/qzzh/cgDensity/SelectSlidingwindow/SelectSlidingwindow_mtbr1.txt",row.names=F,col.names=F,quote=F,append=T)
+       write.table(sw.df,"/home/qzzh/cgDensity/SelectSlidingwindow/SelectSlidingwindow_mtbr2.txt",row.names=F,col.names=F,quote=F,append=T)
 }
 }
 #tissue <- do.call(rbind,ts.list)
